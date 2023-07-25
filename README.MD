@@ -9,6 +9,7 @@
 - https://mui.com/material-ui/react-app-bar/
 - https://mui.com/material-ui/react-container/
 - https://mui.com/material-ui/react-grid/
+- https://mui.com/material-ui/react-stack/
 - https://mui.com/material-ui/react-typography/
 - https://react-chartjs-2.js.org/
 - https://www.chartjs.org/
