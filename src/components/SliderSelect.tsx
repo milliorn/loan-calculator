@@ -24,30 +24,6 @@ const SliderSelect = (props: Props) => {
 
   return (
     <div>
-      {/* Down Payment Slider */}
-      <SliderContainer
-        onChange={(event: Event, value: number | number[]) => {
-          if (typeof value === "number") {
-            // Ensure downPayment at least 0, at most the loanAmount
-            // Update state with new downPayment value
-            props.setData({
-              ...props.data,
-              downPayment: Number(
-                Math.min(Math.max(0, value), props.data.loanAmount).toFixed(0)
-              ),
-            });
-          }
-        }}
-        amount={props.data.downPayment}
-        defaultValue={props.data.downPayment}
-        label="Down Payment"
-        max={props.data.loanAmount}
-        min={0}
-        steps={100}
-        unit="$"
-        value={props.data.downPayment}
-      />
-
       {/* Loan Amount Slider */}
       <SliderContainer
         onChange={(event: Event, value: number | number[]) => {
@@ -96,6 +72,30 @@ const SliderSelect = (props: Props) => {
         steps={0.1} // Set step size to 0.1 (representing 0.1%)
         unit="%"
         value={props.data.interestRate}
+      />
+
+      {/* Down Payment Slider */}
+      <SliderContainer
+        onChange={(event: Event, value: number | number[]) => {
+          if (typeof value === "number") {
+            // Ensure downPayment at least 0, at most the loanAmount
+            // Update state with new downPayment value
+            props.setData({
+              ...props.data,
+              downPayment: Number(
+                Math.min(Math.max(0, value), props.data.loanAmount).toFixed(0)
+              ),
+            });
+          }
+        }}
+        amount={props.data.downPayment}
+        defaultValue={props.data.downPayment}
+        label="Down Payment"
+        max={props.data.loanAmount}
+        min={0}
+        steps={100}
+        unit="$"
+        value={props.data.downPayment}
       />
     </div>
   );

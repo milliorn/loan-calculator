@@ -1,5 +1,6 @@
 import "./App.css";
 
+import LoanLength from "./components/LoanLength";
 import Navbar from "./components/Navbar";
 import SliderSelect from "./components/SliderSelect";
 
@@ -32,6 +33,7 @@ function App() {
           <Grid item xs={12} md={6}>
             {/* displayed in the left half of the screen for medium screens */}
             <SliderSelect data={data} setData={setData} />
+            <LoanLength data={data} setData={setData} />
           </Grid>
           <Grid item xs={12} md={6}>
             {/* displayed in the right half of the screen for medium screens */}

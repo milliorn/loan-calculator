@@ -20,12 +20,12 @@ function SliderContainer(props: Props) {
   return (
     <>
       {/* Stack for label and value display */}
-      <Stack my={4}>
-        <Stack gap={1}>
+      <Stack my={2}>
+        <Stack gap={2}>
           {/* label for slider */}
           <Typography variant="subtitle2">{props.label}</Typography>
           {/* current value of slider */}
-          <Typography variant="h5">
+          <Typography variant="h6">
             {props.unit} {props.amount}
           </Typography>
         </Stack>
