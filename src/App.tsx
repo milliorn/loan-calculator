@@ -1,5 +1,4 @@
-import "./App.css";
-
+import ChartResults from "./components/ChartResults";
 import LoanLength from "./components/LoanLength";
 import Navbar from "./components/Navbar";
 import SliderSelect from "./components/SliderSelect";
@@ -14,7 +13,7 @@ function App() {
     downPayment: 0,
     interestRate: 0,
     loanAmount: 0,
-    loanTerm: 5,
+    loanTerm: 1,
   });
 
   return (
@@ -30,13 +29,14 @@ function App() {
           {/* "Grid" items are cells in the grid system */}
           {/* "xs" prop specifies item's size for extra-small screens */}
           {/* "md" prop specifies item's size for medium screens */}
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} sm={6}>
             {/* displayed in the left half of the screen for medium screens */}
             <SliderSelect data={data} setData={setData} />
             <LoanLength data={data} setData={setData} />
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} sm={6}>
             {/* displayed in the right half of the screen for medium screens */}
+            <ChartResults data={data} />
           </Grid>
         </Grid>
       </Container>

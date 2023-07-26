@@ -5,8 +5,6 @@ import ReactDOM from "react-dom/client";
 
 import App from "./App";
 
-import "./index.css";
-
 // contains styling instructions for our app
 import { theme } from "../theme";
 

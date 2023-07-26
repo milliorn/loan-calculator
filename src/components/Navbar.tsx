@@ -13,11 +13,16 @@ const Navbar = () => {
       <Container maxWidth="xl">
         {/* container for content inside AppBar */}
         {/* arrange elements in a row inside AppBar */}
-        <Toolbar>
+        <Toolbar
+          // Custom styles for the Toolbar component based on the screen size
+          sx={{
+            textAlign: "center", // Center the content horizontally
+          }}
+        >
           {/* text element with style options from MUI */}
           {/* "variant" prop changes font size, style, and "sx" is for additional custom styles */}
           <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
-            Loan Calculator
+            Calculator
           </Typography>
         </Toolbar>
       </Container>
