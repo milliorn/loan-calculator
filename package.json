@@ -3,10 +3,13 @@
   "private": true,
   "type": "module",
   "version": "0.0.0",
+  "homepage": "http://milliorn.github.io/loan-calculator",
   "scripts": {
     "build": "tsc && vite build",
     "dev": "vite",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -21,6 +24,7 @@
     "@types/react": "^18.2.16",
     "@types/react-dom": "^18.2.4",
     "@vitejs/plugin-react": "^4.0.0",
+    "gh-pages": "^5.0.0",
     "typescript": "^5.0.4",
     "vite": "^4.3.5"
   }
