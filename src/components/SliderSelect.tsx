@@ -93,13 +93,13 @@ const SliderSelect = (props: Props) => {
       {/* Map over the sliders array and render each SliderContainer */}
       {sliders.map((slider, index) => (
         <SliderContainer
-          key={index} // Add a unique key for each slider
-          onChange={slider.onChange}
           amount={slider.value}
           defaultValue={slider.value}
+          key={index} // Add a unique key for each slider
           label={slider.label}
           max={slider.max}
           min={slider.min}
+          onChange={slider.onChange}
           steps={slider.steps}
           unit={slider.unit}
           value={slider.value}

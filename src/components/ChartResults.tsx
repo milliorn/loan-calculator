@@ -1,6 +1,6 @@
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import { Pie } from "react-chartjs-2";
 import { Stack, Typography } from "@mui/material";
+import { ArcElement, Chart as ChartJS, Legend, Tooltip } from "chart.js";
+import { Pie } from "react-chartjs-2";
 
 type Props = {
   data: {
@@ -40,6 +40,7 @@ const ChartResults = (props: Props) => {
         data: [loanAmountWithDownPayment, totalInterest],
         hoverOffset: 4,
         label: "Total Loan Amount",
+        responsive: true,
       },
     ],
   };
@@ -48,7 +49,7 @@ const ChartResults = (props: Props) => {
     monthlyPayment.toFixed(2) === "NaN" ? "0.00" : monthlyPayment.toFixed(2); // format monthly payment
 
   return (
-    <Stack sx={{ width: "100%" }} spacing={2} gap={3}>
+    <Stack sx={{ width: "100%" }} spacing={2} gap={2}>
       <Typography variant="h4" textAlign={"center"}>
         Monthly Payment: ${monthlyTotal}
       </Typography>

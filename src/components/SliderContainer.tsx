@@ -1,5 +1,5 @@
-import Slider from "@mui/material/Slider";
 import { Typography } from "@mui/material";
+import Slider from "@mui/material/Slider";
 import { Stack } from "@mui/system";
 
 // Define the prop types
