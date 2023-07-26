@@ -1,5 +1,13 @@
 # Loan Calculator
 
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [License](#license)
+
 ## Introduction
 
 The Loan Calculator is a React application that helps users calculate their loan payments. It's a user-friendly and intuitive tool that enables you to input essential loan details, such as the principal amount, interest rate, and loan term. The calculator will then display the monthly payment amount and the total repayment amount.
@@ -12,14 +20,6 @@ The key features of this Loan Calculator include:
 - Real-time calculation and updating of results as you modify the slider values.
 - Clear and concise display of monthly payment and total repayment amounts.
 - Responsive design, ensuring a seamless experience on both desktop and mobile devices.
-
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Features](#features)
-- [Getting Started](#getting-started)
-- [Project Structure](#project-structure)
-- [License](#license)
 
 ## Useful Links
 
