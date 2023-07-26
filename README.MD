@@ -1,57 +1,48 @@
-# Vite Starter
+# Loan Calculator
+
+## Introduction
+
+The Loan Calculator is a React application that helps users calculate their loan payments. It's a user-friendly and intuitive tool that enables you to input essential loan details, such as the principal amount, interest rate, and loan term. The calculator will then display the monthly payment amount and the total repayment amount.
+
+## Features
+
+The key features of this Loan Calculator include:
+
+- Input slider for entering the loan amount, interest rate, and loan term.
+- Real-time calculation and updating of results as you modify the slider values.
+- Clear and concise display of monthly payment and total repayment amounts.
+- Responsive design, ensuring a seamless experience on both desktop and mobile devices.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [License](#license)
 
 ## Useful Links
 
-- https://emotion.sh/docs/introduction
-- https://emotion.sh/docs/styled
-- https://mui.com/
-- https://mui.com/material-ui/api/toolbar/
-- https://mui.com/material-ui/react-app-bar/
-- https://mui.com/material-ui/react-container/
-- https://mui.com/material-ui/react-grid/
-- https://mui.com/material-ui/react-stack/
-- https://mui.com/material-ui/react-typography/
-- https://react-chartjs-2.js.org/
-- https://www.chartjs.org/
-
-  Vite starter template with React and Typescript. It provides a solid foundation for building web applications using modern technologies. This template includes support for environment variables, allowing easy configuration of your project. It also leverages Sass for styling, making it convenient to create visually appealing designs.
+- [Emotion Documentation](https://emotion.sh/docs/introduction)
+- [Emotion Styled API](https://emotion.sh/docs/styled)
+- [Material-UI](https://mui.com/)
+- [Material-UI Toolbar API](https://mui.com/material-ui/api/toolbar/)
+- [Material-UI AppBar](https://mui.com/material-ui/react-app-bar/)
+- [Material-UI Container](https://mui.com/material-ui/react-container/)
+- [Material-UI Grid](https://mui.com/material-ui/react-grid/)
+- [Material-UI Stack](https://mui.com/material-ui/react-stack/)
+- [Material-UI Typography](https://mui.com/material-ui/react-typography/)
+- [React Chart.js 2](https://react-chartjs-2.js.org/)
+- [Chart.js](https://www.chartjs.org/)
 
 ## Getting Started
 
-To start the development server, run the following command `npm run dev`
-To build the project, run the following command `npm run build`
-To preview the built project, run the following command `npm run preview`
+To get started with the Loan Calculator, follow these steps:
 
-## Environment Variables
-
-Vite supports environment variables by creating a .env file in the project's root directory. Add environment variables starting with VITE\_ to this file. For example `VITE_API_KEY=123456789`
-
-You can access environment variables in your code using import.meta.env. For example:
-
-```jsx
-const Header = () => {
-  return <div>{import.meta.env.VITE_API_KEY}</div>;
-};
-
-export default Header;
-```
-
-## Using SASS
-
-Sass support is built into Vite. We can use it by installing the sass package. `npm install sass`
-Create a `styles` folder and add `main.scss` file.
-
-```css
-body {
-  background-color: steelblue;
-}
-```
-
-Import Sass file into the app.jsx file.
-
-```jsx
-import "./styles/main.scss";
-```
+1. Navigate to the project directory: `cd loan-calculator`
+2. To start the development server, run the following command: `npm run dev`
+3. To build the project, run the following command: `npm run build`
+4. To preview the built project, run the following command: `npm run preview`
 
 ## Project Structure
 
@@ -71,4 +62,4 @@ The project structure is organized as follows:
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
