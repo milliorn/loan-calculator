@@ -2,67 +2,61 @@ import Slider from "@mui/material/Slider";
 import { Typography } from "@mui/material";
 import { Stack } from "@mui/system";
 
-// Defining the type of props that this component will receive
+// Define the prop types
 type Props = {
   amount: number;
   defaultValue: number;
   label: string;
   max: number;
   min: number;
-  onChange: any;
+  onChange: (event: Event, value: number | number[]) => void; // Event handler function that receives the event and slider value
   steps: number;
   unit: string;
-  value: number;
+  value: number; // current value of the slider
 };
 
-// Our custom slider control for our app
-const SliderContainer = (props: Props) => {
+// renders the slider UI
+function SliderContainer(props: Props) {
   return (
     <>
-      {/* "Stack" is a container to organize elements in a stack */}
-      {/* Adds margin on the top and bottom of the stack */}
+      {/* Stack for label and value display */}
       <Stack my={4}>
-        {/* Stack the label and the current value */}
-        {/* Adds space between the label and value */}
         <Stack gap={1}>
-          {/* "Typography" is a text element with style options from MUI */}
-          {/* Here, we display the label for the slider */}
+          {/* label for slider */}
           <Typography variant="subtitle2">{props.label}</Typography>
+          {/* current value of slider */}
           <Typography variant="h5">
-            {/* Here, we display the current value */}
             {props.unit} {props.amount}
           </Typography>
         </Stack>
       </Stack>
 
-      {/* "Slider" is a control that users interact with */}
-      {/* It allows them to choose a value between the min and max values */}
+      {/* Material-UI */}
       <Slider
         aria-label="Default"
-        defaultValue={props.defaultValue}
-        marks // This adds marks at specified values on the slider track
-        max={props.max} // The maximum value for the slider
-        min={props.min} // The minimum value for the slider
-        onChange={props.onChange} // The function to call when the slider value changes
-        step={props.steps} // The increment/decrement value for the slider
-        value={props.value} // The current value of the slider
-        valueLabelDisplay="auto" // This shows a label with the current value next to the thumb
+        defaultValue={props.defaultValue} // initial value of slider
+        marks // Display marks on slider track
+        max={props.max} // maximum value of slider
+        min={props.min} // minimum value of slider
+        onChange={props.onChange} // update value when slider is moved
+        step={props.steps} // step size which the slider value changes
+        value={props.value} // current value of slider
+        valueLabelDisplay="auto" // value label next to slider thumb
       />
 
-      {/* Horizontal container */}
-      {/* It helps us arrange elements in a row with space in between */}
+      {/* Stack to min and max values of the slider */}
       <Stack direction="row" justifyContent="space-between">
-        {/* Here, we display the minimum value with the unit */}
+        {/* minimum value with the unit */}
         <Typography variant="caption" color="text.secondary">
           {props.unit} {props.min}
         </Typography>
-        {/* Here, we display the maximum value with the unit */}
+        {/* maximum value with the unit */}
         <Typography variant="caption" color="text.secondary">
           {props.unit} {props.max}
         </Typography>
       </Stack>
     </>
   );
-};
+}
 
 export default SliderContainer;

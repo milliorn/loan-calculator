@@ -1,28 +1,40 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
 
-import { Grid } from "@mui/material";
+import Navbar from "./components/Navbar";
+import SliderSelect from "./components/SliderSelect";
+
 import { Container } from "@mui/system";
+import { Grid } from "@mui/material";
+
+import { useState } from "react";
 
 function App() {
+  const [data, setData] = useState({
+    downPayment: 0,
+    interestRate: 0,
+    loanAmount: 0,
+    loanTerm: 5,
+  });
+
   return (
     <div className="App">
       <Navbar />
 
-      {/* The "Container" component helps keep our content centered */}
-      {/* The "sx" prop is for additional custom styles */}
+      {/* helps keep our content centered */}
+      {/* "sx" prop is for additional custom styles */}
       <Container maxWidth="xl" sx={{ marginTop: 4 }}>
-        {/* The "Grid" component is a grid system that organize content */}
+        {/* grid system that organize content */}
         {/* The "container" tells Grid to be the main container */}
         <Grid container spacing={5} alignItems="center">
-          {/* The "Grid" items are cells in the grid system */}
-          {/* The "xs" prop specifies the item's size for extra-small screens */}
-          {/* The "md" prop specifies the item's size for medium screens */}
+          {/* "Grid" items are cells in the grid system */}
+          {/* "xs" prop specifies item's size for extra-small screens */}
+          {/* "md" prop specifies item's size for medium screens */}
           <Grid item xs={12} md={6}>
-            {/* This will be displayed in the left half of the screen for medium screens */}
+            {/* displayed in the left half of the screen for medium screens */}
+            <SliderSelect data={data} setData={setData} />
           </Grid>
           <Grid item xs={12} md={6}>
-            {/* This will be displayed in the right half of the screen for medium screens */}
+            {/* displayed in the right half of the screen for medium screens */}
           </Grid>
         </Grid>
       </Container>
