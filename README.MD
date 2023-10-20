@@ -1,5 +1,8 @@
 # Loan Calculator
 
+[![CodeQL](https://github.com/milliorn/loan-calculator/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/milliorn/loan-calculator/actions/workflows/github-code-scanning/codeql)
+[![pages-build-deployment](https://github.com/milliorn/loan-calculator/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/milliorn/loan-calculator/actions/workflows/pages/pages-build-deployment)
+
 ## Table of Contents
 
 - [Introduction](#introduction)
